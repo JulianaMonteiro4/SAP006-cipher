@@ -2,13 +2,48 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Caesar Cipher</title>
+  <title>Criptografia e Descriptografia</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  <div id="root">
-    <h1>Hello world!</h1>
-  </div>
+  <main>
+    <h1>Criptografia e Descriptografia</h1>
+    <p>Cifre e Decifre mensagens secretas. <br> <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank"> O que é cifra de Cesar? Entre nesse link e descubra</a> <br>
+      <br> Adicione a mensagem na caixa de texto abaixo para cifrar qualquer mensagem.
+    </p>
+
+    <form id="cifrador" autocomplete="off">
+      <input id="textCifra" spellcheck="false" placeholder="Insira a mensagem para Criptografar" type ="text" name ="text">
+      <!-- Resultado da cifra -->
+      <input id="resultadoCifra" type="text" name="text">
+      <!-- Botão de quant de deslocamento -->
+      <div class="offsetCifra" >
+        <input id="rangeCifra" type="range" value="25" min="1" max="50" oninput="this.nextElementSibling.value = this.value">
+        <output>25</output>
+      </div>
+    </form>
+    <!--  Botão Cifrar -->
+    <div class="buttons">
+      <button id="cifrarButton" type="submit"> Codificar </button>
+    </div> 
+
+    <p>Adicione a mensagem na caixa de texto abaixo para decifrar</p>
+    <form id="decifrador" autocomplete="off">
+      <input id="textDecifra" spellcheck="false" placeholder="Insira a mensagem para Decriptografar" type ="text" name ="text">
+      <!-- Resultado da cifra -->
+      <input id="resultadoDecifra" type="text" name="text">
+      <!-- Botão de quant de deslocamento -->
+      <div class="offsetDecifra" >
+        <input id="rangeDecifra" type="range" value="25" min="1" max="50" oninput="this.nextElementSibling.value = this.value">
+        <output>25</output>
+      </div>
+    </form>
+    <!--  Botão Decifrar -->
+    <div class="buttons">
+      <button id="decifrarButton" type="submit"> Descodificar </button>
+    </div> 
+  </main>
   <script src="index.js" type="module"></script>
 </body>
 </html>

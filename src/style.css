@@ -1,1 +1,104 @@
-/* css */
+/* fonte do terminal */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+* {
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+
+/* tanho e cor do bory */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+    color: white;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+/* tamanho, caixa e sombra */
+main{
+    padding: 25px;
+    box-shadow: 8px 8px 35px 0px rgb(0 0 0 / 75%);
+    border-radius: var(--borde-redondo);
+}
+
+/* margen do h1 */
+h1 {
+    margin: 0;
+}
+
+/* cor da caixa de texto do resultado da Cifra */
+#textCifra {
+    background-color: #292b36;
+    width: -webkit-fill-available;
+}
+
+/* cor da caixa de texto do resultado da Decifra */
+#textDecifra  {
+    background-color: #292b36;
+    width: -webkit-fill-available;
+}
+
+/*cor e tamanho da caixa de texto pergunta */
+#textCifra, #textDecifra {
+    margin: 10px 0 0;
+    padding: 10px;
+    color: white;
+    border-top-left-radius: var(--borde-redondo);
+    border-top-right-radius: var(--borde-redondo);
+}
+ 
+.buttons { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}   
+    button:hover {
+        background-color: #5a745ac9;
+    }
+
+
+/* cor e tamanho do resultado na caixa Cifra e Decifra */
+#resultadoCifra, #resultadoDecifra {
+    background-color: #292b36;
+    height: 20px;
+    width: -webkit-fill-available;
+    color: rgb(71, 255, 71);
+    padding: 0 10px 10px;
+    border-top-left-radius: var(--borde-redondo);
+    border-top-right-radius: var(--borde-redondo);
+}
+
+/* tamanho e posição da faixa de Cifrar e Decifrar*/
+.offsetCifra, .offsetDecifra {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    text-align: center;
+    align-items: center;
+}
+
+/* cor e tamanho da faixa */
+input[type='range'] {
+    -webkit-appearance: none;
+    border-radius: var(--borde-redondo);
+    background-color: #292b36;
+    margin: 0;
+    padding: 0 5px;
+    height: 20px;
+}
+
+/* desing e cor da bolinha da faixa */
+input[type='range']::-webkit-slider-thumb {
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: white;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
